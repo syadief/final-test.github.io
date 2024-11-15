@@ -34,8 +34,8 @@ class DataController extends Controller
 
         $validated = $request->validate([
             'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
+            'email' => 'unique:data|required',
+            'phone' => 'unique:data|required',
             'levels_id' => 'required',
         ]);
 
@@ -55,8 +55,8 @@ class DataController extends Controller
 
         $validated = $request->validate([
             'name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
+            'email' => 'unique:data|required',
+            'phone' => 'unique:data|required',
             'levels_id' => 'required',
         ]);
 
